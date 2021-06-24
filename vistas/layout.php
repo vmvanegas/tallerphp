@@ -41,11 +41,11 @@ if (session_status() === PHP_SESSION_NONE) {
               <li class="nav-item">
                 <a class="nav-link" href="../controladores/usuariosListarControlador.php">Notas de estudiantes</a>
               </li>
-            <?php }?>
+            <?php } ?>
           </ul>
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">          
+          <ul class="navbar-nav ml-auto">
             <?php
             if (!isset($_SESSION["rol"])) { ?>
               <li class="nav-item">
@@ -74,22 +74,50 @@ if (session_status() === PHP_SESSION_NONE) {
     ?>
   </main>
 
-  <footer class="bg-dark d-flex justify-content-center align-items-center">
+  <footer class="bg-dark d-flex justify-content-center align-items-center py-3">
 
-    <div class="d-flex justify-content-lg-center align-items-center m-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 d-flex justify-content-lg-center align-items-center">
 
-      <div class="m-2"> <img class="ico" src="../assets/pic/github_w.png" alt=""></div>
-      <div class="d-flex flex-column align-items-center">
-        <p class="text-white m-0 p-0"> Victor Vanegas </p>
-        <p class="text-white m-0 p-0 ">vmvanegas</p>
+          <div class="m-2"> <img class="ico" src="../assets/pic/github_w.png" alt=""></div>
+          <div class="d-flex flex-column align-items-center">
+            <p class="text-white m-0 p-0"> Victor Vanegas </p>
+            <!--         <p class="text-white m-0 p-0 ">vmvanegas</p>
+ -->
+          </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-lg-center align-items-center">
+
+          <div class="m-2"> <img class="ico" src="../assets/pic/github_w.png" alt=""></div>
+          <div class="d-flex flex-column align-items-center">
+            <p class="text-white m-0 p-0"> Jair Rivera </p>
+            <!--         <p class="text-white m-0 p-0 ">vmvanegas</p>
+ -->
+          </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-lg-center align-items-center">
+
+          <div class="m-2"> <img class="ico" src="../assets/pic/github_w.png" alt=""></div>
+          <div class="d-flex flex-column align-items-center">
+            <p class="text-white m-0 p-0"> Steven Sanchez </p>
+            <!--         <p class="text-white m-0 p-0 ">vmvanegas</p>
+ -->
+          </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-lg-center align-items-center">
+
+          <div class="m-2"> <img class="ico" src="../assets/pic/github_w.png" alt=""></div>
+          <div class="d-flex flex-column align-items-center">
+            <p class="text-white m-0 p-0"> Natalia Lagos </p>
+            <!--         <p class="text-white m-0 p-0 ">vmvanegas</p>
+ -->
+          </div>
+        </div>
       </div>
     </div>
 
   </footer>
-
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

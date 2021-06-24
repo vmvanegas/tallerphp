@@ -13,9 +13,6 @@ class enrutamiento
             case 0:
                 $v = "home.php";
                 break;
-            case 2:
-                $v = "productos.php";
-                break;
             case 3:
                 $v = "formularioCrearUsuario.php";
                 break;
