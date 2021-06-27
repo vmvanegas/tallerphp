@@ -8,7 +8,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
 $datos = new servicioDatos();
 
-$users = $datos->getUsers();
+if(isset($_SESSION["rol"]) && $_SESSION["rol"] == "estudiante"){
+    $users = $datos->getUserById($_SESSION["idUser"]);
+} else {
+    $users = $datos->getUsers();
+}
 
 
 $vista = "listarUsuarios.php";

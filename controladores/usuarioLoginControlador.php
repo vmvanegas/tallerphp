@@ -15,6 +15,7 @@ if( (isset($_POST['usuario'])) && (!empty($_POST['usuario'])) &&
 
         $logeado = $datos->validarUsuario($usuario,$con);
         if (isset($logeado)) {
+            $_SESSION["idUser"] = $logeado["user_id"];
             $_SESSION["usuario"] = $logeado["email"];
             $_SESSION["nombre"] = $logeado["name"];
             $_SESSION["rol"] = $logeado["rol"];
