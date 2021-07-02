@@ -21,15 +21,15 @@
       </div>
       <div class="form-group">
         <label>Nota 1</label>
-        <input type="number" class="form-control" name="gradePoint1" placeholder="ej: 5" required>
+        <input type="number" class="form-control" max="10" name="gradePoint1" placeholder="ej: 5" required>
       </div>
       <div class="form-group">
         <label>Nota 2</label>
-        <input type="number" class="form-control" name="gradePoint2" placeholder="ej: 10" required>
+        <input type="number" class="form-control" max="10" name="gradePoint2" placeholder="ej: 10" required>
       </div>
       <div class="form-group">
         <label>Nota 3</label>
-        <input type="number" class="form-control" name="gradePoint3" placeholder="ej: 2" required>
+        <input type="number" class="form-control" max="10" name="gradePoint3" placeholder="ej: 2" required>
       </div>
       <button type="submit" class="btn btn-primary">Guardar</button>
     </form>

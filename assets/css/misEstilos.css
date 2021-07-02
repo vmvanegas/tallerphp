@@ -22,8 +22,14 @@ main {
     flex: 1 !important;
 }
 
+.link-icon {
+    display: block;
+    padding: 0 .5rem;
+    color: #8892BD;
+}
+
 .red {
-    color: red;
+    color: rgb(182, 69, 69)!important;
 }
 
 .side-menu-dark {
@@ -43,10 +49,23 @@ main {
     text-decoration: none;
 }
 
+.table thead th {
+    border-bottom: none;
+    font-weight: 400;
+}
+
 .table td, th {
     vertical-align: middle;
 }
 
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f5f9ff;
+}
+
+.table td, .table th {
+    border: none;
+    white-space: nowrap;
+}
 
 .btn-primary {
     background-color: #8892BD;
@@ -57,3 +76,104 @@ main {
     background-color: #8892BD;
     border-color: #8892BD;
 }
+
+
+/*PROFILE CARDS*/
+
+.profile-card{
+    position: relative;
+    margin-top: 86px;
+    margin-bottom: 1rem;
+}
+
+.profile-card .img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #8892BD;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;    
+}
+
+.profile-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-card .info {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.profile-card .info h2 {
+    color: #8892BD;
+    font-size: 20px;
+}
+
+.profile-card .info small {
+    color: #3d3d3d;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.profile-card .footer {
+    background-color: #8892BD;
+    color: #fafbff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 0 .25rem .25rem;
+}
+
+
+
+/*DROPDOWN MENU*/
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+}
+.dropdown-menu a {
+    display: flex;
+    color: #8892BD;
+    padding: 1rem;
+}
+.dropdown-menu a:hover{
+    background-color: #d2e6f16b;    
+}
+
+.dropdown-menu a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    margin-right: .5rem;
+}
+
+
+.btn-transparent {
+    border: none!important;
+    background-color: transparent;
+    color: #8892BD!important;
+    box-shadow: none!important;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.btn-transparent:hover {
+    background-color: #d2e6f16b; 
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }

@@ -3,7 +3,7 @@
     <h1 class="h3">Notas de estudiantes</h1>
   </div>
   <div class="col-md-6">
-    <div class="d-flex w-100 justify-content-end">
+    <div class="d-flex w-100 justify-content-md-end">
       <?php if (isset($_SESSION["rol"]) && $_SESSION["rol"] == "cordinador") { ?>
         <a class="btn btn-primary" href="../controladores/rutasControlador.php?rutaOpc=3">Agregar estudiante</a>
       <?php } ?>
@@ -11,7 +11,7 @@
   </div>
 </div>
 <div class="card">
-  <div class="table-responsive">
+  <div class="table-md-responsive">
     <table class="table table-striped">
       <thead class="table-dark">
         <tr>
@@ -34,13 +34,32 @@
             <td><?php echo $user["grade_point_1"] ?></td>
             <td><?php echo $user["grade_point_2"] ?></td>
             <td><?php echo $user["grade_point_3"] ?></td>
-            <td><?php echo $user["grade_point_average"] ?></td>
-            <td><a href="../controladores/usuarioDetalleControlador.php?id=<?php echo $user["user_id"] ?>">Detalle</a></td>
+            <td><?php echo number_format($user["grade_point_average"], 2, '.', ""); ?></td>
+
+
+            <!-- <?php if (isset($_SESSION["rol"]) && ($_SESSION["rol"] != "estudiante")) { ?>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-transparent" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a class="link-icon" href="../controladores/usuarioDetalleControlador.php?id=<?php echo $user["user_id"] ?>"><i class="fas fa-info"></i> Ver detalle</a></li>
+                    <?php if (isset($_SESSION["rol"]) && ($_SESSION["rol"] == "cordinador" || $_SESSION["rol"] == "profesor")) { ?>
+                      <li><a class="link-icon" href="../controladores/usuariosDatosEditarControlador.php?id=<?php echo $user["user_id"] ?>"><i class="far fa-edit"></i> Editar</a></li>
+                    <?php } ?>
+                    <?php if (isset($_SESSION["rol"]) && $_SESSION["rol"] == "cordinador") { ?>
+                      <li><a class="link-icon red" href="../controladores/usuarioDetalleBorrarControlador.php?id=<?php echo $user["user_id"] ?>"><i class="far fa-trash-alt"></i> Borrar</a></li>
+                    <?php } ?>                   
+                  </ul>
+                </div>
+              </td>
+            <?php } ?> -->
+          
+            <td align="center" width="50"><a class="link-icon" title="ver detalle" href="../controladores/usuarioDetalleControlador.php?id=<?php echo $user["user_id"] ?>"><i class="fas fa-info"></i></a></td>
             <?php if (isset($_SESSION["rol"]) && ($_SESSION["rol"] == "cordinador" || $_SESSION["rol"] == "profesor")) { ?>
-              <td><a href="../controladores/usuariosDatosEditarControlador.php?id=<?php echo $user["user_id"] ?>">Editar</a></td>
+              <td align="center" width="50"><a class="link-icon" title="editar" href="../controladores/usuariosDatosEditarControlador.php?id=<?php echo $user["user_id"] ?>"><i class="far fa-edit"></i></a></td>
             <?php } ?>
             <?php if (isset($_SESSION["rol"]) && $_SESSION["rol"] == "cordinador") { ?>
-              <td><a class="red" href="../controladores/usuarioDetalleBorrarControlador.php?id=<?php echo $user["user_id"] ?>">Borrar</a></td>
+              <td align="center" width="50"><a class="link-icon red" title="borrar" href="../controladores/usuarioDetalleBorrarControlador.php?id=<?php echo $user["user_id"] ?>"><i class="far fa-trash-alt"></i></a></td>
             <?php } ?>
           </tr>
         <?php

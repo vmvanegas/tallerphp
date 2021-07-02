@@ -13,6 +13,9 @@ class enrutamiento
             case 0:
                 $v = "home.php";
                 break;
+            case 1:
+                $v = "nosotros.php";
+                break;
             case 3:
                 $v = "formularioCrearUsuario.php";
                 break;
@@ -26,5 +29,4 @@ class enrutamiento
 
         return $v;
     }
-
 }

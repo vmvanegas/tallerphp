@@ -26,15 +26,15 @@
       <?php } ?>
       <div class="form-group">
         <label class="form-label">Nota 1</label>
-        <input type="number" class="form-control" name="gradePoint1" placeholder="ej: 5" value="<?php echo $gradePoint1 ?>" required>
+        <input type="number" class="form-control" max="10" name="gradePoint1" placeholder="ej: 5" value="<?php echo $gradePoint1 ?>" required>
       </div>
       <div class="form-group">
         <label class="form-label">Nota 2</label>
-        <input type="number" class="form-control" name="gradePoint2" placeholder="ej: 10" value="<?php echo $gradePoint2 ?>" required>
+        <input type="number" class="form-control" max="10" name="gradePoint2" placeholder="ej: 10" value="<?php echo $gradePoint2 ?>" required>
       </div>
       <div class="form-group">
         <label class="form-label">Nota 3</label>
-        <input type="number" class="form-control" name="gradePoint3" placeholder="ej: 2" value="<?php echo $gradePoint3 ?>" required>
+        <input type="number" class="form-control" max="10" name="gradePoint3" placeholder="ej: 2" value="<?php echo $gradePoint3 ?>" required>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Guardar</button>
